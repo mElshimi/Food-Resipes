@@ -1,7 +1,6 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import "ldrs/grid";
-import "ldrs/hourglass";
 import "ldrs/trio";
 import { createContext, useEffect, useState } from "react";
 
@@ -141,20 +140,15 @@ export default function AuthContextProvider(props) {
     }
   };
   useEffect(() => {
-    try {
-      if (localStorage.getItem("token")) {
-        saveLoginData();
-        getCurrentUser();
-        getAllCategories();
-        getAllRecipes();
-        getUsersSystem();
-        getUsersAdmin();
-      }
-    } catch (error) {
-      console.log(error)
+    if (localStorage.getItem("token")) {
+      saveLoginData();
+      getCurrentUser();
+      getAllCategories();
+      getAllRecipes();
+      getUsersSystem();
+      getUsersAdmin();
+      getAllFavsRecipes();
     }
-
-    // getAllFavsRecipes();
   }, []);
 
   return (
@@ -184,3 +178,6 @@ export default function AuthContextProvider(props) {
     </AuthContext.Provider>
   );
 }
+
+
+
