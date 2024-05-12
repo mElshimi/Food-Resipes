@@ -121,7 +121,7 @@ export default function AuthContextProvider(props) {
           headers: requestHeaders,
         }
       );
-      setAlFavs(response.data.data);
+      setAllFavs(response.data.data);
       // console.log(response.data.totalNumberOfRecords);
       setAllFavs(response.data.totalNumberOfRecords);
       // console.log(response.data.data);
