@@ -1,0 +1,111 @@
+.textArea:hover {
+  outline: none;
+  border: solid 1px rgb(74, 163, 90);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(74 163 90 / 20%);
+}
+
+.formFieldRecipe {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 18.75px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Inter;
+  border-radius: 6px;
+  color: var(--input-color);
+  border: 1px solid transparent;
+  background: #f7f7f7;
+  transition: border 0.3s ease;
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+  &:focus {
+    outline: none;
+    border-color: rgb(74, 163, 90);
+    background: #fff;
+  }
+}
+
+.formGroupRecipe {
+  position: relative;
+  display: flex;
+  width: 100%;
+  & > span,
+  .formField {
+    white-space: nowrap;
+    display: block;
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+    &:last-child {
+      border-radius: 0 6px 6px 0;
+    }
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
+
+  .formFieldRecipe {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  & > span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--group-color);
+    background: #f7f7f7;
+    border: 1px solid transparent;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  }
+  &:focus-within {
+    & > span {
+      color: var(--group-color-focus);
+      background: var(--group-background-focus);
+      border-color: var(--group-border-focus);
+    }
+  }
+}
+
+.priceInput {
+  border-radius: 6px 0 0 6px;
+}
+.btnSubmitRecipe {
+  background-color: var(--btnSubmitColor) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 24.2px !important;
+  color: #fff !important;
+}
+
+.formImage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed rgb(74, 163, 90);
+  background-color: #f1fff0;
+
+  border-radius: 6px;
+}
+.formImage input {
+  /* width: 50% !important; */
+  position: absolute;
+  top: 10%;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+}

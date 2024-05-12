@@ -1,0 +1,113 @@
+.responsive-table-recipes {
+  padding: 0;
+  li {
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .table-header {
+    padding: 25px 35px;
+    background-color: #e2e5eb;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+  .table-row {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
+  }
+  .col-1 {
+    flex-basis: 5%;
+  }
+  .col-2 {
+    flex-basis: 10%;
+  }
+  .col-3 {
+    flex-basis: 15%;
+  }
+  .col-4 {
+    flex-basis: 12%;
+  }
+  .col-5 {
+    flex-basis: 28%;
+  }
+  .col-6 {
+    flex-basis: 15%;
+  }
+  .col-7 {
+    flex-basis: 10%;
+  }
+  .col-8 {
+    flex-basis: 5%;
+  }
+
+  .table-row div i {
+    cursor: pointer;
+  }
+
+  /***************************************/
+
+  /*************************************************/
+
+  @media all and (max-width: 650px) {
+    .table-header {
+      display: none;
+    }
+
+    li {
+      display: block;
+    }
+    .col {
+      width: 100% !important;
+      flex-basis: 100%;
+    }
+    .col {
+      width: 50%;
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6c7a89;
+        content: attr(data-label);
+        flex-basis: 50%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.recipe-img {
+  width: 80px;
+}
+.recipe-img-not {
+  width: 85px;
+}
+
+.modal-remove {
+  transform: translateY(35%);
+}
+.see-more-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.5s;
+}
+.see-more-btn:hover {
+  color: #009247;
+  font-size: 30px;
+}
+.see-more-btn:hover i {
+  -webkit-animation: fa-beat 1s infinite linear;
+  animation: fa-beat 1s infinite linear;
+}

@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../../../../assets/fonts/Inter-Regular.ttf);
+}
+
+.NotFound {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.vector {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 21%;
+}
+.content {
+  padding-top: 100px;
+}
+.textSide h3 {
+  font-family: Inter;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: left;
+  color: #000;
+}
+.textSide h4 {
+  font-family: Inter;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 38.73px;
+  text-align: left;
+  color: #009247;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.textSide h4::before {
+  content: "...";
+  position: absolute;
+  top: 15%;
+  font-family: Inter;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 48.41px;
+  color: #000;
+}
+.textSide p {
+  width: 90%;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 50px;
+  color: #1f263e;
+}
+.textSide button {
+  padding: 12px 120px;
+  border-radius: 8px;
+  background: #009247;
+  border: none;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textSide button i {
+  position: absolute;
+  left: 30%;
+}
+.robotSide {
+  --fa-bounce-start-scale-x: 1;
+  --fa-bounce-start-scale-y: 1;
+  --fa-bounce-jump-scale-x: 1;
+  --fa-bounce-jump-scale-y: 1;
+  --fa-bounce-land-scale-x: 1;
+  --fa-bounce-land-scale-y: 1;
+  --fa-bounce-rebound: 0;
+}
+.robotSide img {
+  width: 120%;
+}
+/******************************************/
+@media screen and (max-width: 992px) {
+  .vector {
+    top: 25%;
+    left: 15%;
+  }
+  .content {
+    padding-top: 15px;
+  }
+  .textSide h3 {
+    font-size: 60px;
+    line-height: 45px;
+    text-align: center;
+  }
+  .textSide h4 {
+    font-size: 40px;
+    line-height: 38.73px;
+    text-align: center;
+  }
+
+  .textSide p {
+    width: 100%;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .textSide button {
+    margin: auto;
+    padding: 12px 170px;
+  }
+  .robotSide {
+    text-align: center;
+  }
+
+  .robotSide img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .robotSide img {
+    width: 115%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .vector {
+    top: 25%;
+    left: 15%;
+  }
+  .robotSide {
+    text-align: left;
+  }
+  .robotSide img {
+    width: 110%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .vector {
+    top: 20%;
+    left: 2%;
+  }
+
+  .robotSide img {
+    width: 105%;
+  }
+}

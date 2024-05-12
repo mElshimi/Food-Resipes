@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../../../assets/fonts/Inter-Regular.ttf);
+}
+.tt {
+  font-size: 0.5rem;
+}
+.test {
+  font-size: 5em;
+}
+
+:root {
+  --input-color: #99a3ba;
+  --input-border: #cdd9ed;
+  --input-background: #fff;
+  --input-placeholder: #cbd1dc;
+
+  --input-border-focus: #258f38;
+
+  --group-color: var(--input-color);
+  --group-border: var(--input-border);
+  --group-background: #eef4ff;
+
+  --group-color-focus: #fff;
+  --group-border-focus: var(--input-border-focus);
+  --group-background-focus: #4aa35a;
+  --btnSubmitColor: #4aa35a;
+}
+
+.authContainer {
+  background-image: url(../../../assets/images/bgAuth.png);
+  background-size: 100% 100%;
+}
+.layer {
+  background: linear-gradient(
+    51.22deg,
+    rgba(47, 140, 96, 0.63) -22.39%,
+    rgba(0, 0, 0, 0.6237) 61.76%
+  );
+}
+
+.authBody h3 {
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30.26px;
+  color: #000;
+}
+.authBody p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  color: rgba(73, 73, 73, 0.6);
+}
+.btnSubmit {
+  background-color: var(--btnSubmitColor) !important;
+  font-family: Inter !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 24.2px !important;
+  color: #fff !important;
+}
+.btnLinks {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+.btnColor {
+  color: #4aa35a;
+}
+/********************************************************************/
+
+.formField {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 18.75px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Inter;
+  border-radius: 6px;
+  color: var(--input-color);
+  border: 1px solid var(--input-border);
+  background: var(--input-background);
+  transition: border 0.3s ease;
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+  &:focus {
+    outline: none;
+    border-color: var(--input-border-focus);
+  }
+}
+
+.formGroup {
+  position: relative;
+  display: flex;
+  width: 100%;
+  & > span,
+  .formField {
+    white-space: nowrap;
+    display: block;
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+    &:last-child {
+      border-radius: 0 6px 6px 0;
+    }
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
+
+  .formField {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  & > span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--group-color);
+    background: var(--group-background);
+    border: 1px solid var(--group-border);
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  }
+  &:focus-within {
+    & > span {
+      color: var(--group-color-focus);
+      background: var(--group-background-focus);
+      border-color: var(--group-border-focus);
+    }
+  }
+}
+
+a[data-styling="eyeOff"] {
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--group-color) !important;
+  background: var(--group-background);
+  border: 1px solid var(--group-border);
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+a[data-styling="eyeOn"] {
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--group-color-focus) !important;
+  background: var(--group-background-focus);
+  border: 1px solid var(--group-border-focus);
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/****************************************/
+
+@media only screen and (max-width: 1100px) {
+  .authContainer {
+    background-size: cover;
+    background-position: right;
+  }
+}
+/*************************************************/

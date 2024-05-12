@@ -1,0 +1,19 @@
+.fave-description {
+  height: 50px;
+  overflow-y: auto;
+}
+.see-more-btn-fav {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.5s;
+}
+.see-more-btn-fav:hover {
+  color: #009247;
+  font-size: 25px;
+}
+.see-more-btn-fav:hover i {
+  -webkit-animation: fa-beat 1s infinite linear;
+  animation: fa-beat 1s infinite linear;
+}

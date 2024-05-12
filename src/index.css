@@ -1,0 +1,104 @@
+.pagination li span {
+  color: #009247;
+}
+.p-active {
+  background-color: #009247;
+  color: #fff !important;
+}
+
+.p-active:hover {
+  color: #009247 !important;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(46, 158, 100);
+}
+::-webkit-scrollbar-track {
+  background: #dbfdd9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #009247;
+}
+.page-link {
+  color: #009247;
+}
+.active .page-link {
+  background-color: #009247;
+  color: #fff;
+  border-color: #009247;
+}
+.page-link:focus {
+  z-index: 3;
+  color: #009247;
+  background-color: var(--bs-pagination-focus-bg);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(10, 197, 94, 0.25);
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: #009247;
+}
+.dropdown-item.active,
+.dropdown-item:hover {
+  background-color: rgba(10, 197, 94, 0.25);
+}
+.th-profile {
+  width: 150px;
+}
+.header-img-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.header-char-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #009247;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.header-char-profile h2 {
+  font-size: 100px;
+}
+
+.dash-card {
+  background-color: #009247;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px ;
+  padding-bottom: 20px ;
+  border-radius: 8px;
+}
+.dash-card h4 {
+  font-size: 30px;
+  padding-top: 10px;
+}
+.dash-card h4 span {
+  font-size: 25px;
+  padding-left: 10px;
+}
+.dash-card button{
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+.dash-card button:hover i {
+  -webkit-animation: fa-beat 1s infinite linear;
+  animation: fa-beat 1s infinite linear;
+}

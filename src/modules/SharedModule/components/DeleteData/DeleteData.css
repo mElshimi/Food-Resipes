@@ -1,0 +1,15 @@
+.delete h5 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  color: #494949;
+}
+.delete p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+
+  color: #49494999;
+}
