@@ -28,17 +28,7 @@ export default function AuthContextProvider(props) {
   //   }
 
   // };
-  let saveLoginData = () => {
-    let encodedToken = localStorage.getItem("token");
-    if (encodedToken) {
-      try {
-        let decodedToken = jwtDecode(encodedToken);
-        setLoginData(decodedToken);
-      } catch (error) {
-        console.error("Error decoding token:", error);
-      }
-    }
-  };
+
   const [currUser, setCurrUser] = useState(null);
   const getCurrentUser = async () => {
     try {
@@ -139,15 +129,26 @@ export default function AuthContextProvider(props) {
       console.log(err);
     }
   };
+  let saveLoginData = () => {
+    let encodedToken = localStorage.getItem("token");
+    if (encodedToken) {
+      try {
+        let decodedToken = jwtDecode(encodedToken);
+        setLoginData(decodedToken);
+        getCurrentUser();
+        getAllCategories();
+        getAllRecipes();
+        getUsersSystem();
+        getUsersAdmin();
+        getAllFavsRecipes();
+      } catch (error) {
+        console.error("Error decoding token:", error);
+      }
+    }
+  };
   useEffect(() => {
     if (localStorage.getItem("token")) {
       saveLoginData();
-      getCurrentUser();
-      getAllCategories();
-      getAllRecipes();
-      getUsersSystem();
-      getUsersAdmin();
-      getAllFavsRecipes();
     }
   }, []);
 
@@ -178,6 +179,3 @@ export default function AuthContextProvider(props) {
     </AuthContext.Provider>
   );
 }
-
-
-
