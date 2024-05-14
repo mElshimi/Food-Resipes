@@ -48,64 +48,41 @@ export default function Dashboard() {
           </div>
           <div className="info container mt-5 mb-3">
             <div className="row  gy-2 ">
-              <div className="col-lg-3 col-md-6">
-                <div className="dash-card">
-                  <i className="fa fa-users fa-3x" aria-hidden="true"></i>
-                  <h4>
-                    Users <span>{allUsersSystem}</span>{" "}
-                  </h4>
-                  <button
-                    onClick={() => {
-                      navigate("/dashboard/users");
-                    }}
-                  >
-                    <i className="fa-solid fa-arrow-right-long fa-2x"></i>
-                  </button>
+              <div className="col-lg-2 col-md-4 col-sm-6">
+                <div className="dash-card text-start">
+                  <i className="fa fa-users fa-2x ms-4" aria-hidden="true"></i>
+                  <h6>Users</h6>
+                  <h4>{allUsersSystem}</h4>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6">
-                <div className="dash-card">
-                  <i className="fa fa-user-tie fa-3x" aria-hidden="true"></i>
-                  <h4>
-                    Admins <span>{allUsersAdmin}</span>{" "}
-                  </h4>
-                  <button
-                    onClick={() => {
-                      navigate("/dashboard/users");
-                    }}
-                  >
-                    <i className="fa-solid fa-arrow-right-long fa-2x"></i>
-                  </button>
+              <div className="col-lg-2 col-md-4 col-sm-6">
+                <div className="dash-card text-start">
+                  <i
+                    className="fa fa-user-tie fa-2x ms-4"
+                    aria-hidden="true"
+                  ></i>
+                  <h6>Admins</h6>
+                  <h4>{allUsersAdmin}</h4>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6">
-                <div className="dash-card">
-                  <i className="fa fa-table-list fa-3x" aria-hidden="true"></i>
-                  <h4>
-                    Categories <span>{allCategories}</span>
-                  </h4>
-                  <button
-                    onClick={() => {
-                      navigate("/dashboard/categories");
-                    }}
-                  >
-                    <i className="fa-solid fa-arrow-right-long fa-2x"></i>
-                  </button>
+              <div className="col-lg-2 col-md-4 col-sm-6">
+                <div className="dash-card text-start ">
+                  <i
+                    className="fa fa-table-list fa-2x ms-4"
+                    aria-hidden="true"
+                  ></i>
+                  <h6>Categories</h6>
+                  <h4>{allCategories}</h4>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6">
-                <div className="dash-card">
-                  <i className="fa fa-bowl-rice fa-3x" aria-hidden="true"></i>
-                  <h4>
-                    Recipes <span>{allRecipes}</span>
-                  </h4>
-                  <button
-                    onClick={() => {
-                      navigate("/dashboard/recipes");
-                    }}
-                  >
-                    <i className="fa-solid fa-arrow-right-long fa-2x"></i>
-                  </button>
+              <div className="col-lg-2 col-md-4 col-sm-6">
+                <div className="dash-card text-start">
+                  <i
+                    className="fa fa-bowl-rice fa-2x ms-4"
+                    aria-hidden="true"
+                  ></i>
+                  <h6>Recipes</h6>
+                  <h4>{allRecipes}</h4>
                 </div>
               </div>
             </div>
@@ -118,34 +95,24 @@ export default function Dashboard() {
       {loginData?.userGroup == "SystemUser" ? (
         <div className="info container mt-5">
           <div className="row gy-2">
-            <div className="col-lg-6 ">
-              <div className="dash-card d-flex justify-content-evenly align-items-center   ">
-                <i className="fa-solid fa-heart fa-3x" aria-hidden="true"></i>
-                <h4>
-                  Your Favs <span>{allFavs}</span>
-                </h4>
-                <button
-                  onClick={() => {
-                    navigate("/dashboard/favs");
-                  }}
-                >
-                  <i className="fa-solid fa-arrow-right-long fa-2x"></i>
-                </button>
+            <div className="col-lg-2 col-md-4 col-sm-6">
+              <div className="dash-card text-start">
+                <i
+                  className="fa-solid fa-heart fa-2x ms-4"
+                  aria-hidden="true"
+                ></i>
+                <h6>Your Favs</h6>
+                <h6>{allFavs}</h6>
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="dash-card d-flex justify-content-evenly align-items-center">
-                <i className="fa fa-bowl-rice fa-3x" aria-hidden="true"></i>
-                <h4>
-                  All Recipes <span>{allRecipes}</span>
-                </h4>
-                <button
-                  onClick={() => {
-                    navigate("/dashboard/recipes");
-                  }}
-                >
-                  <i className="fa-solid fa-arrow-right-long fa-2x"></i>
-                </button>
+            <div className="col-lg-2 col-md-4 col-sm-6">
+              <div className="dash-card text-start">
+                <i
+                  className="fa fa-bowl-rice fa-2x ms-4"
+                  aria-hidden="true"
+                ></i>
+                <h6>Recipes</h6>
+                <h4>{allRecipes}</h4>
               </div>
             </div>
           </div>
