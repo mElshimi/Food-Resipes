@@ -14,7 +14,7 @@ const Images = {
   robot2: require("../../../../assets/images/robot2.svg"),
   header1: require("../../../../assets/images/header1.png"),
   header2: require("../../../../assets/images/header2.png"),
-  userAvatar: require("../../../../assets/images/chicken.png"),
+  userAvatar: require("../../../../assets/images/user.png"),
   noData: require("../../../../assets/images/no-data.png"),
   recipe: require("../../../../assets/images/recipe.png"),
   recipeImgNot: require("../../../../assets/images/1.svg"),

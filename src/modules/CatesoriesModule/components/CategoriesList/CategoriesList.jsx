@@ -121,7 +121,7 @@ export default function CategoriesList() {
   // use effect to invoke getCategories after the component mount
   useEffect(() => {
     // invoke getCategories
-    getCategories("", 20);
+    getCategories("", 10);
     getAllCategories();
     // console.log(width);
   }, [pageNumber, nameValue]);
@@ -155,7 +155,7 @@ export default function CategoriesList() {
       const response = await axios.post(`${baseUrl}/Category`, data, {
         headers: requestHeaders,
       });
-      getCategories(nameValue, 20);
+      getCategories(nameValue, 10);
       toast.success(`Added ${data.name} Successfully`);
 
       setValue("name", "");
@@ -171,7 +171,7 @@ export default function CategoriesList() {
       const response = await axios.delete(`${baseUrl}/Category/${idCategory}`, {
         headers: requestHeaders,
       });
-      getCategories(nameValue, 20);
+      getCategories(nameValue, 10);
       toast.success(`Deleted ${nameCategory} Successfully`);
     } catch (err) {
       console.log(err);
@@ -188,7 +188,7 @@ export default function CategoriesList() {
           headers: requestHeaders,
         }
       );
-      getCategories(nameValue, 20);
+      getCategories(nameValue, 10);
       toast.success(`Updated ${nameCategory} Successfully`);
     } catch (err) {
       console.log(err);
@@ -196,7 +196,7 @@ export default function CategoriesList() {
   };
   const getNameValue = (e) => {
     setNameValue(e.target.value);
-    getCategories(e.target.value, 20);
+    getCategories(e.target.value, 10);
   };
   return (
     <>

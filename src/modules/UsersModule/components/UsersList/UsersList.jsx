@@ -97,7 +97,7 @@ export default function UsersList() {
   // use effect to invoke getCategories after the component mount
   useEffect(() => {
     // invoke getCategories
-    getUsers(searchValues, 20);
+    getUsers(searchValues, 10);
   }, [pageNumber, searchValues]);
 
   // function for delete category to the server
@@ -106,13 +106,13 @@ export default function UsersList() {
       const response = await axios.delete(`${baseUrl}/Users/${idUser}`, {
         headers: requestHeaders,
       });
-      getUsers(searchValues, 20);
+      getUsers(searchValues, 10);
       handleCloseDelete();
       toast.success(`Deleted ${nameUser} Successfully`);
       getUsersSystem();
     } catch (err) {
       toast.error(err.response.data.message);
-      getUsers(searchValues, 20, 1);
+      getUsers(searchValues, 10, 1);
       handleCloseDelete();
     }
   };
@@ -121,7 +121,7 @@ export default function UsersList() {
     const values = { ...searchValues };
     values[e.target.name] = e.target.value;
     setSearchValues(values);
-    getUsers(values, 20);
+    getUsers(values, 10);
   };
 
   return (
@@ -155,7 +155,7 @@ export default function UsersList() {
                   <input
                     className={`formFieldRecipe  bgInput `}
                     type="search"
-                    placeholder="Search by Recipe Name"
+                    placeholder="Search by User Name"
                     // onChange={getNameValue}
                     onChange={getSearchValues}
                     name="userName"
@@ -230,7 +230,7 @@ export default function UsersList() {
                         ) : (
                           <img
                             className="recipe-img-not"
-                            src={imgs.recipeImgNot}
+                            src={imgs.userAvatar}
                             alt=""
                           />
                         )}
@@ -245,7 +245,7 @@ export default function UsersList() {
                         {user.country}
                       </div>
                       <div className="col col-7 " data-label="Role :">
-                        {user.group.name}
+                        {user.group.name == "SuperAdmin" ? "Admin" : "User"}
                       </div>
                       <div className="col col-8 " data-label="Actions :">
                         <div className="btn-group">
@@ -281,7 +281,7 @@ export default function UsersList() {
                               </div>
                             </li>
 
-                            <li
+                            {/* <li
                               role="button"
                               onClick={() =>
                                 handleShowDelete(user.id, user.userName)
@@ -296,7 +296,7 @@ export default function UsersList() {
                                   <span>Delelte</span>
                                 )}
                               </div>
-                            </li>
+                            </li> */}
                           </ul>
                         </div>
                       </div>

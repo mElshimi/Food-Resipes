@@ -86,6 +86,10 @@
   }
 }
 
+.bgInput::placeholder {
+  color: #0000008e;
+}
+
 .recipe-img {
   width: 80px;
 }
