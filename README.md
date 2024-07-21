@@ -52,9 +52,6 @@ Our Project Management System includes a variety of business features designed t
   - **Update**: Update category.
   - **Delete**: Remove completed or obsolete categories.
 
-- **Shared Module:
-  - **Code Reusability**: Facilitate code reuse across different parts of the application.
-
 - **Forms with Validation**:
   - **Data Integrity**: Implement form validations to ensure data integrity and consistency.
   - **User Experience**: Provide a smooth and error-free user experience with real-time validation feedback.
@@ -70,7 +67,7 @@ Our Project Management System includes a variety of business features designed t
 
 ## Live-Demo
 
-📎 [Demo Link](https://app-food-recipes.netlify.app/#/login)
+📎 [Demo Link](https://app-food-recipes.netlify.app)
 
 + ****Credentials As A User**** :
   - Email : elshimi57@gmail.com
