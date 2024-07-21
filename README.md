@@ -26,7 +26,7 @@ This project utilizes a variety of packages to enhance functionality and improve
 
 ## Business Features
 
-Our Project Management System includes a variety of business features designed to enhance productivity, ensure secure access, and provide a smooth user experience. Here are the detailed features:
+Our Food Resipes includes a variety of business features designed to enhance productivity, ensure secure access, and provide a smooth user experience. Here are the detailed features:
 
 - **Authentication**: 
   - **Login**: Secure user login functionality with JWT token-based authentication.
